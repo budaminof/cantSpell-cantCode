@@ -22,9 +22,8 @@
 
       function controller ($scope, $log, $state) {
         var vm = this;
-
+        vm.sendMsg = sendMsg;
         vm.show = $state.$current.self.name;
-        $log.log('in code, state params', $state.$current.self.name)
         var socket = io();
 
         socket.emit('join', { showName: $state.$current.self.name });
@@ -35,7 +34,7 @@
           $scope.$apply();
         })
 
-        vm.sendMsg = function () {
+        function sendMsg () {
           socket.emit('msg', vm.codeRoom);
         }
 

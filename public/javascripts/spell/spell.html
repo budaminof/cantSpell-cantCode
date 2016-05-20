@@ -1,6 +1,9 @@
 <section class="col-md-offset-2">
   <h1>in spelling</h1>
-  <button class="btn btn-primary" ng-click="all()">send to {{vm.show}}</button>
-  <input type="text" ng-model="spellRoom">
+  <button class="btn btn-primary" ng-click="vm.sendMsg()">send to {{vm.show}}</button>
+  <input type="text" ng-model="vm.spellRoom">
+  <div ng-repeat="message in vm.messages track by $index">
+    {{message}}
+  </div>
 
 </section>
