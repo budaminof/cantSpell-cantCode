@@ -2,3 +2,11 @@ body {
   background-color: rgb(255, 227, 144);
   color: rgb(51, 51, 51);
 }
+
+.code {
+  background-color: rgb(166, 147, 179);
+}
+
+.spell {
+  background-color: rgb(146, 227, 164);
+}
