@@ -15,7 +15,7 @@
     '$httpProvider'
   ];
 
-  function setupStates($stateProvider,$urlRouterProvider,$locationProvider,$httpProvider){
+  function setupStates($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider){
     $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise("/");
 

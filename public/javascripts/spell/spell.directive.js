@@ -14,10 +14,16 @@
         }
       }
 
-      controller.$inject = ["$log"]
+      controller.$inject = ["$log", "$state"]
 
-      function controller ($log) {
+      function controller ($log, $state) {
         var vm = this;
+
+        vm.show = $state.$current.self.name;
+        var socket = io();
+
+        socket.emit('join', { showName: $state.$current.self.name });
+
 
       }
 }());
